@@ -1,0 +1,30 @@
+@use "variables" as v;
+
+@mixin title-text {
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 35px;
+  line-height: 45px;
+  color: v.$light-color;
+}
+
+@mixin regular-text {
+  font-family: "MontserratRegular", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: v.$light-color;
+}
+
+@mixin title-text_mobile {
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 25px;
+  line-height: 28px;
+}
+
+@mixin regular-text_mobile {
+  font-family: "MontserratRegular", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+

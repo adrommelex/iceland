@@ -1,0 +1,80 @@
+@use "modules/forwarded" as f;
+
+@font-face {
+  font-family: "MullerRegular";
+  src: url("../../assets/fonts/MullerRegular.otf");
+}
+
+@font-face {
+  font-family: "MontserratRegular";
+  src: url("../../assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "MontserratMedium";
+  src: url("../../assets/fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: "MontserratSemiBold";
+  src: url("../../assets/fonts/Montserrat-SemiBold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "MontserratRegular", sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  background-color: f.$dark-color;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.light__text {
+  color: f.$light-color;
+}
+
+.flip__button {
+  width: 46px;
+  height: 46px;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  &:hover:not(.button-disabled) {
+    transition: all 0.3s linear;
+    box-shadow: 0 3px 5px 1px #00000054;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
